@@ -1,0 +1,56 @@
+mysql> create table employee(emp_Id int, emp_name varchar(20), emp_dep varchar(20), salary int, date_of_join date);
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> alter table employee modify emp_Id int primary key;
+Query OK, 0 rows affected (0.03 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> insert into employee values(1, 'amruta', 'HR', 30000, '2020-12-23');
+Query OK, 1 row affected (0.03 sec)
+
+mysql> (2, 'shrushti', 'HR', 40000, '2020-10-03'),
+    -> (3, 'shivani', 'HR', 30000, '2022-01-12');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '2, 'shrushti', 'HR', 40000, '2020-10-03'),
+(3, 'shivani', 'HR', 30000, '2022-01-' at line 1
+
+mysql> insert into employee values(2, 'shrushti', 'HR', 40000, '2020-10-03');
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into employee values(3, 'shivani', 'HR', 30000, '2022-01-12');
+Query OK, 1 row affected (0.03 sec)
+
+mysql> select * from employee;
++--------+----------+---------+--------+--------------+
+| emp_Id | emp_name | emp_dep | salary | date_of_join |
++--------+----------+---------+--------+--------------+
+|      1 | amruta   | HR      |  30000 | 2020-12-23   |
+|      2 | shrushti | HR      |  40000 | 2020-10-03   |
+|      3 | shivani  | HR      |  30000 | 2022-01-12   |
++--------+----------+---------+--------+--------------+
+3 rows in set (0.00 sec)
+
+mysql> update employee set salary=50000 where emp_Id=2;
+Query OK, 1 row affected (0.03 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> alter table employee rename to emp;
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> delete from emp where emp_id=3;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into emp values(3, 'shivani', 'HR', 30000, '2020-10-03');
+Query OK, 1 row affected (0.03 sec)
+
+mysql> truncate table emp;
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> select * from emp;
+Empty set (0.03 sec)
+
+mysql> drop table emp;
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> select * from emp;
+ERROR 1146 (42S02): Table 'java.emp' doesn't exist
+mysql>
