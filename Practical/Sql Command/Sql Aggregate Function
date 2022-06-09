@@ -1,0 +1,105 @@
+mysql> use java;
+Database changed
+mysql> show tables;
++----------------+
+| Tables_in_java |
++----------------+
+| person         |
+| student        |
+| student_course |
+| student_info   |
+| student_info2  |
++----------------+
+5 rows in set (0.01 sec)
+
+mysql> create table product(id int primary key, paname varchar(20), company varchar(20), qty int, rate int, cost int);
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> desc product;
++---------+-------------+------+-----+---------+-------+
+| Field   | Type        | Null | Key | Default | Extra |
++---------+-------------+------+-----+---------+-------+
+| id      | int(11)     | NO   | PRI | NULL    |       |
+| paname  | varchar(20) | YES  |     | NULL    |       |
+| company | varchar(20) | YES  |     | NULL    |       |
+| qty     | int(11)     | YES  |     | NULL    |       |
+| rate    | int(11)     | YES  |     | NULL    |       |
+| cost    | int(11)     | YES  |     | NULL    |       |
++---------+-------------+------+-----+---------+-------+
+6 rows in set (0.03 sec)
+
+mysql> insert into product values(1,'maggie', 'nestley',5,10,20),
+    -> (2,'dairymilk','nestley',10,10,40),
+    -> (3,'hide and seek','parle',10,20,20);
+Query OK, 3 rows affected (0.01 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> select * from product;
++----+---------------+---------+------+------+------+
+| id | paname        | company | qty  | rate | cost |
++----+---------------+---------+------+------+------+
+|  1 | maggie        | nestley |    5 |   10 |   20 |
+|  2 | dairymilk     | nestley |   10 |   10 |   40 |
+|  3 | hide and seek | parle   |   10 |   20 |   20 |
++----+---------------+---------+------+------+------+
+3 rows in set (0.00 sec)
+
+mysql> select count(*) from product;
++----------+
+| count(*) |
++----------+
+|        3 |
++----------+
+1 row in set (0.03 sec)
+
+mysql> select sum(cost) from product;
++-----------+
+| sum(cost) |
++-----------+
+|        80 |
++-----------+
+1 row in set (0.01 sec)
+
+mysql> select avg(cost) from product;
++-----------+
+| avg(cost) |
++-----------+
+|   26.6667 |
++-----------+
+1 row in set (0.00 sec)
+
+mysql> select min(cost) from product;
++-----------+
+| min(cost) |
++-----------+
+|        20 |
++-----------+
+1 row in set (0.01 sec)
+
+mysql>
+mysql> select max(rate) from product;
++-----------+
+| max(rate) |
++-----------+
+|        20 |
++-----------+
+1 row in set (0.00 sec)
+
+mysql> select sum(qty) from product;
++----------+
+| sum(qty) |
++----------+
+|       25 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> select count(paname) from product;
++---------------+
+| count(paname) |
++---------------+
+|             3 |
++---------------+
+1 row in set (0.00 sec)
+
+mysql>
+
