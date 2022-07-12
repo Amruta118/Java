@@ -1,0 +1,889 @@
+Q 1: Suppose, during the training session in Xyz Company you was provided with the following program:  
+class Arr { 
+ public static void main (String args[]) { 
+ try{ 
+ throw new RuntimeException(); 
+ }catch(RuntimeException e) { 
+ try{ 
+ System.out.println("Hello"); 
+ e.printStackTrace(); 
+ } 
+ System.out.println("SCJP"); 
+ catch(Exception x) { 
+ System.out.println(x); 
+ } 
+ } 
+ } 
+} 
+What happens when you compile and run the preceding program?
+A. It will print Hello       B.    It will Print Hello and RuntimeException
+C. It will print Hello, RuntimeException, SCJP D.    This program will not compile
+Answer: Option D is correct.
+
+Q 2: Imagine, you appeared for an interview in the ABC Company and there you were provided with
+following program:
+class Except { 
+ public void disp() throws EOFException,FileNotFoundException { 
+ System.out.println("It is a super class"); 
+ } 
+} 
+class Except1 extends Except { 
+ public void disp() throws FileNotFoundException { 
+ System.out.println("It is a sub class named except1"); 
+ } 
+} 
+class Trial extends Except { 
+ public void disp() throws IOException { 
+ System.out.println("It is a sub class named trial"); 
+ } 
+} 
+What would be the correct option among the following?  
+A. Program will print “It is super class”    B.   Program will print “It is sub class named except1”
+C. Program will print “It is sub class named trial” D.  Program will not compile successfully
+Answer: Option D is correct.
+
+Q 3: Sam as a developer was asked to create a program using switch…case within for loop. Sam created the
+following program:
+class Sam { 
+public static void main(String args[]){ 
+ int z=3; 
+ for(int i=0; i<2;i++) { 
+ z++; 
+ switch(z) { 
+ case 3: System.out.print(z=z+1 +” “); 
+ case 5: System.out.print(z=z+2 + “ “); 
+ break; 
+ default : System.out.print(z=z+8 + “ “); 
+ case 6: System.out.print( z=z+4 + “ “); 
+ } 
+ z--; 
+ } 
+ } 
+} 
+What would be the output of the preceding program out of the following?
+A. 4 7 15 19    B.    12 16    C.    4 7 15  D.    12 16 24 28
+Answer: Option D is correct.  
+
+Q 4: Imagine, you as a student provided with the following program during a class test:
+class Student { 
+ public static void main(String args[]){ 
+ int z=6, k; 
+ for(int i=0; i<2;i++) { 
+ z++; 
+ switch(z) { 
+ case 3: System.out.print(z=z+1 + “ “); 
+ case 5: System.out.print(z=z+2 + “ “); 
+ break; 
+ default : { 
+ for (int x=10; x>3; x++) { 
+ System.out.print(x=k+x + “ “); 
+ } 
+ } 
+ case 6: System.out.print( z=z+4 + “ “); 
+ } 
+ z--; 
+ } 
+ } 
+} 
+What would be the output of the preceding program?
+A. Program will display 8 10 as an output    B.    Program will not compile successfully
+C. Program runs infinity endless      D.    Program will display 8 10 10as an output
+Answer: Option B is correct. 
+
+Q 5: Imagine, you are a trainer in the XYZ company and during training session you asked one trainee to write
+code to implement the labeled continue statement. The trainee had written the following program:
+public class Sam { 
+ public static void main(String args[]) { 
+ int x,y;
+skip: 
+ for(x=2; x<4; x++) { 
+ System.out.print(x + “ “); 
+ for(y=0; y<6;y++) { 
+ System.out.print(y + “ “); 
+ if (x==y) { 
+ continue skip; 
+ } 
+ } 
+ } 
+ } 
+} 
+What happens when you compile and run the preceding program? Choose the correct option from the
+following options:
+A. Program will display 2 0 1 2       B.    Program will display 2 0 1 2 3 0 1 2 3
+C. Program will display 2 0 1 3 0 1 2 3    D.    Program will not compile successfully
+Answer: Option B is correct. 
+
+Q 6: Suppose, you as a trainee provided with an incomplete Java program in which you have to add some code
+so that program would work. The program and code that had to be inserted is as follows:
+public class Abc { 
+ public static void main(String args[]) { 
+ // add code 
+ } 
+ void add( ) { 
+ int x, y,z; 
+ x=y=5; 
+ System.out.println( z=x+y); 
+ } 
+} 
+The code snippets that could be inserted are as follows:
+A.try{new Abc().add();}catch(Error e) {System.out.println(e);} 
+b. new Abc().add(); 
+The program was compiled by inserting both snippets one by one. Choose the correct output out of the
+following:
+A. Both options let the program be successfully compiled
+B. Option A is correct while B is incorrect
+C. Option B is correct while A generates compile time error
+D. The program will print 10 in both the cases
+Answer: Option A and D are correct.  
+
+Q 7 Rose during an interview was provided with some program in which an array element was being divided
+by some number. The program is as follows:  
+import java.io.*; 
+public class Rose{ 
+ public static void main(String args[]){ 
+ int c=0; 
+ int y[]={5, 4, 0,6};
+for(int i=0; i<y.length;i++){ 
+ System.out.println(y[6]/c); 
+ } 
+ } 
+} 
+Choose the correct exception that can be thrown among the following options:
+A. ArithmeticException   B.    ArithmeticException, ArrayIndexOutOfBoundsException
+C. RuntimeException    D.    IOException
+Answer: Correct options are B and C.
+
+Q 8: Sam during an interview was provided with following statements and asked to choose the correct
+statements regarding if…else statement:
+A. An if statement can not be used without else statement
+B. An else statement can be used without if statement
+C. An if statement must evaluates a boolean expression
+D. if(true) { } else { } is legal statement
+Answer: Option C and D are correct.  
+
+Q 9: Rems as a student was provided with the following code snippet  
+public void Rems(float c) { 
+ switch (c) { 
+ case 5: 
+ case 7: 
+ case 2: 
+ default: 
+ case 9.5: 
+ } 
+} 
+After viewing the code snippet Rems was asked to notice the problems in preceding code snippet on the
+basis of the rules regarding switch…case statement. Following are the options from which Rems has to
+choose the correct answer
+A. There is no problem in the code snippet
+B. Switch cannot evaluate float value  
+C. The default statement can not be used between case statements
+D. All cases must be in increasing order  
+Answer: Option B is correct.
+
+Q 10: Rose as a faculty given following options to her students and asked them to choose the correct options:
+A. A switch statement can only evaluate to float and double values
+B. A switch…case block must have break statements after every case  
+C. Switch case must be similar to switch expression type
+D. A switch…case can be nested like nested if…else
+Answer: Option D is correct.
+
+ 11: Sam during an interview was provided with following code and asked to review the program:
+public class Sam { 
+ public static void main(String args[]) { 
+ int x=0, i=0; 
+ for (int y=0; y>=i; ++y,i++) { 
+ System.out.println(y); 
+ System.out.println(i); 
+ } 
+ } 
+} 
+After reviewing the code he was asked to predict the correct options among the following:
+A. Program will print 0 0 for first time
+B. Program results in an endless loop
+C. Program will not compile because declaration is not allowed inside the for loop
+D. Program will successfully compile and print 0 0 on execution and then terminates
+Answer: Option B is correct.
+
+Q 12: Rose during an interview was shown the following program:
+class Rose { 
+ public static void main(String args[]) { 
+ int x = 0;int y=9; 
+ for ( ; x<y; ) { x++; y++;} // (a) 
+ for (x; x==y; --x) continue; // (b) 
+ for (x=0; x<5; ) { x++; } // (c) 
+ for ( ; ; ) ; // (d) 
+ } 
+} 
+What would be the output of the preceding program from the following options?
+A. Program will successfully compile and executes but does not print any value
+B. Program will successfully compile and becomes endless because of loop d
+C. Program will not compile because loop b is syntactically incorrect
+D. Program will not compile because loop a has only expression part but missing initialization and
+increment/decrement part
+Answer: Option C is the correct answer. 
+
+Q 13: Sam was given the following code snippet during an interview and asked to choose all correct decisional
+and loop statements:  
+int y=9; 
+for ( ;true ; ) { break;} // 1 
+if(y==9) { break; } // 2 
+switch(y) {default: break;} // 3 
+do ( ){ // code } while(expression); // 4 
+while ( ) { //code } // 5 
+Options:  
+A. Statement 1 and 3 are correct     B.    Statement 1, 2, and 3 are correct
+C. Statement 1, 3, and 5 are correct    D.   Statement 1,4, and 5 are correct
+E. Statement 1,2, and 4 are correct
+Answer: Correct option is A.  
+
+Q 14: Rem during an interview was provided with the following program:
+class Rose { 
+ public static void main(String args[]) { 
+ int x, y, k; y=3; 
+ label: 
+ for (x = 0; x < y; x++) { 
+ for (k = 0; k < 2; k++) { 
+ if (x == k) { 
+ continue label; 
+ } 
+ System.out.println(x + " and " + k); 
+ } 
+ } 
+ } 
+} 
+What would be the output of the preceding program?
+A. Program will displayed 0 and 0 as an output
+B. Program will displayed 1 and 0 as an output
+C. Program will displayed 1 and 1 as an output
+D. Program will displayed 2 and 0 as an output
+E. Program will displayed 1 and 2 as an output
+F. Program will displayed 2 and 1 as an output
+G. Program will displayed 2 and 2 as an output
+Answer: Correct options are B, D, and F.  
+
+Q 15: Rose during an interview was provided with an incomplete program as follow:
+class Rose{
+// implement method 
+ public static void main(String args[]) { 
+ Rose r= new Rose(); r.max(0,5); 
+ } 
+} 
+Rose was then asked to choose the correct code from the following to implement in the preceding
+incomplete program to return the minimum of two numbers:
+A. int min (int k, int l ) {  if (k < l)  { return k;  return l;  }}
+B. int min ( int k, int l) {switch (k < l) {case true : return k;   default: return l; }
+C. int min ( if (k < l) { return k; } else { return l; }
+D. int min (int k, int l) {return (if (k <l) {k; } else { l; });
+Answer: Option C is the correct option.
+
+Q 16: Sam was given the following program by his teacher:
+class Sam { 
+ public static void main(String args[]) { 
+ int y=2;int i; 
+ for (i=0; i <= 3; i++) { 
+ if (i == 2) { 
+ break; 
+ }else { 
+ y++;} 
+ } 
+ System.out.println(i + ", " + y); 
+ } 
+} 
+What would be the output of the preceding code?
+A. Program will display 2 , 2 as an output    B.    Program will display 2 , 3 as an output
+C. Program will display 2 , 4 as an output    D.   Program will display 1 , 2 as an output
+Answer: Option C is the correct.
+
+Q 17: Rose created the following program to divide a number by zero and put the code in try‐catch‐finally to
+handle the raised exceptions:
+public class Rose 
+{ 
+ public static void main(String args[]) 
+ { 
+ int i=0; 
+ try 
+ { 
+ if (args.length == 0) { 
+ return; 
+ }else{ 
+ int x=Integer.parseInt(args[i]); 
+ try{ 
+ x =x/0; 
+ }catch (ArithmeticException e) { 
+ System.out.print("Divied by 0, "); 
+ } finally { 
+ System.out.print("Try again, "); 
+ } 
+ } 
+} finally { 
+ System.out.print("Outer Try"); 
+ } 
+ } 
+} 
+When this program is executed then the value 5 is passed at runtime. Choose the correct option among
+the following as the result of the preceding program:  
+A. Divided by 0, Try again, and Outer Try    B.    Divided by 0 and Try again
+C. Try again and outer try     D.   Divided by 0
+Answer: Option A is correct.
+
+Q 18: Sam during an interview was given the following options and asked to choose the correct option:
+A. RuntimeException must either be caught or declared to be thrown
+B. NullPointerException is thrown when an object is trying to be accessed through a null object reference.  
+C. The catch block can be used without a try block
+D. The finally block will execute only when any exception will raise in try block
+Answer: Option B is correct. 
+
+ 19: Rems during a training session was shown the following program to predict the correct output:
+public class Rems { 
+ void get ( ) { 
+ int k[]= { 5, 7, 6, 2 , 8}; 
+ for ( int x=0; x<k.length; x++) { 
+ throw new InstantiationException (); 
+ } 
+ } 
+ public static void main(String args[]) { 
+ try{ 
+ new Rose().get(); 
+ } finally { 
+ System.out.println("Always Executes"); 
+ } 
+ System.out.println(" Statement Out of the try block"); 
+ } 
+} 
+What happens when Rems compiles and runs the preceding program.?
+A. Program will not compile successfully
+B. Program will successfully compile and executes without displaying any value  
+C. Program will display Always Executes, and InstantiationException as an output.
+D. Program will successfully compile and display Always Executes  
+Answer: Option A is correct.
+
+Q 20: Rose and Rems while preparing for Java certification came across the following program:
+class Rems { 
+ void get ( ) throws ArrayIndexOutOfBoundsException { 
+ int k[]= { 5, 7, 6, 2 , 8}; 
+ for ( int x=0; x<k.length; x++) { 
+ System.out.print(k[2] + “ “); 
+ } 
+ } 
+} 
+class Rose extends Rems{ 
+ public static void main(String args[]) { 
+ try{ 
+ Rems r= new Rose(); 
+ r.get(); 
+ } catch (IndexOutOfBoundsException ie) { 
+ throw new IndexOutOfBoundsException (); 
+ } 
+ System.out.print(" Statement Out of the try block"); 
+ } 
+} 
+What would be the output of the preceding program?  
+A. ArrayIndexOutOfboundException will be generated
+B. 6 6 6 6 6, Statement out of the try block
+C. 7 7 7 7 7, Statement out of the try block
+D. Program will not compile because main method is not throwing any exception to override the exception
+thrown in Rems class
+Answer: Option B is the correct answer.
+
+Q 21: Rose during an interview was shown the following code snippet, which is incomplete and asked to insert
+the code snippet from the given options to generate assertion error:
+class Rose{ 
+public static void main(String args[]){ 
+int x=5; int y=6; 
+// insert code snippet 
+} 
+} 
+Options are:
+A. assert (x!=y): ʺOKʺ;     B.    assert (x>y);
+C. assert (x<y): ʺIts OKʺ;    D.   assert (true): ʺits fineʺ;
+Answer: Option B is the correct.
+
+Q 22: Mike during an interview was given the following program and asked to predict the output from the
+given options:
+public class Rose{ 
+ public void get(int k, int l, int m) { 
+ assert ( k > l && k > m) : " its ok"; 
+ System.out.println(" Its assertion"); 
+} 
+ public static void main(String[] args) { 
+ Rose r = new Rose(); 
+ r.get(10, 20, 5); 
+ } 
+} 
+What happens when he compile and run the preceding program?
+A. Program will not compile because a non‐static method cannot be called within a static method
+B. Program will successfully compile and executes without displaying any output
+C. Program will successfully compile and executes and also prints Its assertion
+D. Program will generate the AssertionError error.
+Answer: Option D is correct.
+
+ 23: Rems and Sam while preparing for Java certification exam successfully compiled the following program:
+class Rose{ 
+ public void rsam(int k) { 
+ int x=k; 
+ for( int i=3; i<x; i++){ 
+ for (int j=2; j<x-2; j++){ 
+ int y = i + j; 
+ System.out.println( i + " + " + j + " = " + y); 
+ } 
+ } 
+ } 
+ public static void main(String[] args) { 
+ Rose r = new Rose(); 
+ r.rsam(5); 
+ } 
+} 
+What would be the correct set of outputs from the following options?
+A. 3 + 2 = 5    B.    3 + 3 = 6    D.    4 + 2 = 6
+E.    4 + 3 = 7    F.    5 + 2 = 7    G.    5 + 3 = 8
+Answer: Option A and C are correct.
+
+Q 24: Rose after attending a lecture on for statement was shown the following for statements to choose the
+correct for statement:
+A. for( int j=2; j*j==4, j<4; j++)    B.    for (int j=3; j/2==1; j++)
+C. for (int j=3, long k=0; j>k; j++)    D.   int k, j; for (j=3, k=2; k==j‐1; k++, j‐‐)
+Answer: Options B and D are correct for statements
+
+Q 25: Sam works in Xyz Company as Java programmer and he designed the following program:
+class Rose{ 
+public void sam() { 
+ int y[] = {4, 2, 8}; 
+ for (int x=2; x<1+3*2-4; x++){ 
+ System.out.print(x+” “); 
+ for (int j:y) { 
+ j=j*x-4; 
+ System.out.print(j+” “); 
+ } 
+ } 
+ } 
+ public static void main(String[] args) { 
+ Rose r = new Rose(); 
+ r.sam(); 
+ } 
+} 
+What would be the output of this program? Choose the correct option from the following:
+A. The program displays 2 4 2 8       B.    The program displays 2 4 0 12
+C. The program displays 2 4 4 16     D.   The program displays 3 4 0 12
+Answer: Correct option is B.  
+
+Q 26: Sam works in a xyz company and he designed the following program:
+import java.util.*; 
+class Rose { 
+ public static void main (String args[]) { 
+ ArrayList <Integer> arraylist = new ArrayList<Integer>(); 
+ arraylist.add(0); 
+ arraylist.add(2); 
+ arraylist.add(3); 
+ arraylist.add(4); 
+ int y= arraylist.size(); 
+ switch(y) { 
+ case 0: System.out.println(0);break; 
+ case 2: System.out.println(2);break; 
+ case 4: System.out.println(4);break; 
+ case 5: System.out.println(5);break; 
+ default: System.out.println("Default"); 
+ } 
+ } 
+} 
+What would be the answer of the preceding program?  
+A. Program will not compile successfully because ArrayList class do not have size () method rather it has
+getSize() method.
+B. Program will print Default C.    Program will print 4 D.    Program will print 5
+Answer: Option C is correct.  
+
+Q 27: John as a programmer created the following program:
+class Rose { 
+ public static void main (String args[]) { 
+ int x=2; int y=6; 
+ if( x!=y || (y*=x)!=x) { 
+ System.out.println(" Not equal"); 
+}else{ 
+ System.out.println(" Equal"); 
+ } 
+ } 
+} 
+What happens when he compile and run the preceding program?
+A. Program will display Equal
+B. Program will display Not Equal
+C. Program will not compile successfully because if statement is not correct
+D. Program will compile but not executes
+Answer: Option B is the correct answer.  
+
+Q 28: Steve during a training session was shown the following program:
+public class Rose{ 
+ protected void get(boolean x ) { 
+ if(x){ System.out.println("True");} 
+ else { System.out.println("False");} 
+ } 
+ public static void main(String[] args) { 
+ Rose r = new Rose(); 
+ r.get(true); 
+ } 
+} 
+What would be the output when the program is compiled?
+A. Program will display True
+B. Program will display False
+C. Program will successfully compile but give runtime error
+D. Program will not compile successfully
+Answer: Option A is the correct answer
+
+ 29: Rose as a programmer created the following program:
+public class Rose{ 
+ protected void get(char x ) { 
+ switch(x){ 
+ case 88: System.out.println( "X");break; 
+ case 90: System.out.println( "Z");break; 
+ case 89: System.out.println( "Y");break; 
+ default: System.out.println( 0);break; 
+ case -97: System.out.println("a");break; 
+ } 
+ } 
+ public static void main(String[] args) { 
+ Rose r = new Rose(); 
+ r.get('X'); 
+ } 
+} 
+What would be the output of this program?
+A. Program will display X    B.    Program will display X0
+C. Program will not compile successfully   D.    Program will compile successfully but not execute  
+Answer: Option C is the correct answer.  
+
+Q 30: Rems and Sam while preparing for Java certification created the following program:
+public class Rose{ 
+ public static void main(String[] args) { 
+ char x = 'a'; 
+ switch(x){ 
+ case 66: System.out.println( "B" +” “);break; 
+ case 72: System.out.println( "H"+ “ “);break; 
+ case 97: System.out.println("a"+ “ +); 
+ case 89: System.out.println( "Y" + “ “);break; 
+ default: System.out.println( “default”);break; 
+ } 
+ } 
+} 
+What would be the output of this program? Choose the correct option from the following options:
+A. Program will display a  Y default
+B. Program will display a Y
+C. Program will not compile successfully because break cannot be used with default case.
+D. Program will display A
+Answer: Option B is the correct answer.
+
+Q 31: Sam as a developer in Dkinfotech created the following program:
+class Rose { 
+ static int j; 
+ public int arr() { 
+ int y[] = { 5 , 7, 8 , 6}; 
+ j = y[2]; return j; 
+ } 
+ public static void main (String args[]) { 
+ Rose r=new Rose(); 
+ int x = r.arr( ); 
+ System.out.println(x); 
+ switch(x) { 
+ case 0: System.out.print(0 + “ “);break; 
+ case 2: System.out.print(2 + “ “);break; 
+ case 8: System.out.print(8 + “ “); 
+ case 5: System.out.print(5 + “ “);break; 
+ default: System.out.print("Default"); 
+ } 
+ } 
+} 
+What would be the output when Sam compile and execute this program?
+A. Program will not compile successfully    B.    Program will display 8 8 5
+C. Program will display 8 5       D.    Program will display 8
+Answer: Option B is the correct answer.
+
+Q 32: Rose works as a programmer in Xyz Company and during a project she designed the following program:
+public class Rose { 
+ public static void main(String args[]) { 
+ int input, result; 
+ try{ 
+ input= 5; 
+ result= input/0; 
+ System.out.println(result); 
+ }catch (ArithmeticException a) { 
+ a.printStackTrace(); 
+ } 
+ catch (Exception e) { 
+ e.printStackTrace(); 
+ } 
+ finally { 
+ System.out.println("Arithmetic Exception / 0"); 
+ } 
+ } 
+} 
+What would be the output of this program?
+A. Program will generate Java.lang.ArithmeticException: / Zero error
+B. Program will display Arithmetic Exception / 0  
+C. Program will display Java.lang.ArithmeticException: / Zero and Arithmetic Exception / 0
+D. Program will successfully compile and execute
+Answer: Option C is the correct answer
+
+Q 33: Jane works as a programmer in Xyz company and she designed the following program:
+class Rose 
+{ 
+ public void arr() 
+ { 
+ try 
+ { 
+ int y[] = { 2 , 7, 8 , 6}; 
+ for (int j=0; j< y.length; ) 
+ { 
+ j++; 
+ y[j] = y[j-1]; 
+ System.out.print(y[j] + “ “); 
+ }}catch(IndexOutOfBoundsException ie) 
+ { 
+ ie.printStackTrace(); 
+ } 
+ catch(Exception e) { 
+ e.printStackTrace(); 
+ } 
+ } 
+ public static void main (String args[]) 
+ { 
+ Rose r=new Rose();
+r.arr( ); 
+ } 
+} 
+What would be the output of this program?
+A. Program will display 2 2 2 ArrayIndexOutOfBoundsException
+B. Program will display 2 2 2 2  
+C. Program will not compile successfully
+D. Program will display 7 8 6 ArrayIndexOutOfBoundsException
+Answer: Option A is the correct answer.
+
+Q 34: Hem during a training session was asked to create a program to handle Arithmetic exception and he
+designed the following program:
+class Rose { 
+ public void arr() { 
+ try{ 
+ int y= 5, j=0; 
+ System.out.println(y=y/0); 
+ }catch(Exception e) 
+ { 
+ e.printStackTrace(); 
+ }catch(ArithmeticException ae) 
+ { 
+ ae.printStackTrace(); 
+ }finally{ 
+ System.out.println("Hi"); 
+ } 
+ } 
+ public static void main (String args[]) { 
+ Rose r=new Rose(); 
+ r.arr( ); 
+ } 
+} 
+What would be the output of this program?
+A. Program will display ArithmeticException and Hi
+B. Program will display Only Hi
+C. Program will generate Compile time error
+D. Program will generate only ArithmeticException exception
+Answer: Option C is correct
+
+Q 35: Sam works as a developer in Xyz Company and he created the following program:
+class Rose { 
+ public void arr() throws ArithmeticException { 
+ int y= 5, j=0; 
+ System.out.println(y=y/0); 
+ System.out.println(y, j); 
+ catch(Exception e) { 
+ e.printStackTrace(); 
+ } 
+ } 
+ public static void main (String args[]) 
+ { 
+ Rose r=new Rose(); 
+r.arr( ); 
+ } 
+} 
+What would be the output when Sam tries to compile and execute this program?  
+A. Program will display ArithmeticException / 0 will be raised
+B. Program will not compile successfully
+C. Program will compile successfully and execute without displaying any value
+D. Program will display 5 0
+Answer: Option B is the correct answer
+
+Q 36: Jane and Steve while preparing for Java certification designed the following program to handle
+exception:
+class Rose { 
+ public void arr() { 
+ try{ 
+ int y= 5, j=0; 
+ System.out.print(y=y/0 + “ “); 
+ }catch(Exception e) 
+ { 
+ e.printStackTrace(); 
+ } 
+ System.out.print("Hi" + “ “); 
+ finally{ 
+ System.out.print("Hi"); 
+ } 
+ } 
+ public static void main (String args[]) 
+ { 
+ Rose r=new Rose(); 
+ r.arr( ); 
+ } 
+} 
+What would be the output of this program?
+A. Program will display ArithmeticException, Hi, Hi
+B. Program will display Hi Hi
+C. Program will generate Compile time error
+D. Program will display ArithmeticException Hi
+Answer: Option C is the correct answer
+
+Q 37: Sam as a Java developer created the following program:
+class Rose { 
+ public static void main (String args[]) { 
+ try{ 
+ int j=0, x; 
+ x=Double.parseDouble(args[j]); 
+ System.out.println(x/0); 
+ }catch(Exception e) { 
+ System.out.println("Hi"); 
+ } 
+ } 
+}
+What happens when he compile and run the preceding program?
+A. Program displays Hi
+B. Program generates ArithmeticException exception
+C. Program generates Compile time error
+D. Program will successfully compile but does not print any value
+Answer: Option C is the correct answer
+
+Q 38: Sam during an interview was shown the following code:   
+class Rose { 
+ public static void main (String args[]) { 
+ try{ 
+ for(int j=0; j<args.length;j++) { 
+ System.out.println(args[j]-1); 
+ }}catch(ArrayIndexOutOfBoundsException ne) 
+ { 
+ ne.printStackTrace(); 
+ } 
+ catch(Exception e) { 
+ System.out.println("Hi"); 
+ } 
+ } 
+} 
+What happens when he compile and execute the preceding program?
+A. Program deducts 1 from each array element passed on command line and then display array elements
+B. Program generates compile time error
+C. ArrayIndexOutOfBoundsException  
+D. Program displays Hi
+Answer: Option B is the correct answer
+
+Q 39: Jane works as a developer and she created the following program:
+class Rose { 
+ public static void main (String args[]) { 
+ try{ 
+ int x[]= {}; 
+ System.out.println(x.length); 
+ for(int j=0; j<=x.length;j++) { 
+ System.out.println(x[j+1]); 
+ }}catch(IndexOutOfBoundsException ne) 
+ { 
+ ne.printStackTrace(); 
+ } 
+ catch(Exception e) { 
+ System.out.println("Hi"); 
+ } 
+ } 
+} 
+What would be the output when this program is compiled and executed?
+A. Program will display 0 Hi
+B. Program will display 0 java.lang.ArrayIndexOutOfBoundsException
+C. Program generates compilation error because array is not initialized
+D. Program will display 0 
+Answer: Option B is the correct answer
+
+Q 40: Sam and Jane while preparing for Java certification came across the following program:
+class Rose { 
+ public static void main (String args[]) { 
+ try{ 
+ Object obj= new String ("Hello"); 
+ System.out.print(obj + “ “); 
+ Integer in= (Integer) obj; 
+ System.out.println(in); 
+ }catch(ClassCastException ce){ 
+ ce.printStackTrace(); 
+ } 
+ catch(Exception e) { 
+ System.out.print("Hi"); 
+ } 
+ } 
+} 
+What would be the output of the program?
+A. Program will display Hello  
+B. Program generates compilation error because an object of String class is being created using Object class
+C. Program will display Hello Hello
+D. Program will handle ClassCastException exception and Hello
+Answer: Option D is the correct answer
+
+Q 41: Jane created the following program while preparing for Java certification:
+class Rose { 
+ public static void main (String args[]) { 
+ try{ 
+ for(int x=0; x<4; x=x+3/2) { 
+ System.out.print(x + “ “); 
+ } 
+ }catch(Exception ce){ 
+ ce.printStackTrace(); 
+ } 
+ catch(ArithmeticException e) { 
+ System.out.print("Hi"); 
+ } 
+ } 
+} 
+What would be the answer of this program?
+A. Program will display 0 1 2 3
+B. Program generates compilation Error
+C. Program will display 0 1 2  
+D. Program generates runtime error
+Answer: Option B is the correct answer
+
+Q 42: Sam works as a programmer in Xyz Company and he created the following program to read data from a
+file:
+import java.io.*; 
+class Rose { 
+ public static void main (String args[]) { 
+ try{ 
+ FileReader f= new FileReader("abd.txt"); 
+ BufferedReader br=new BufferedReader(f); 
+ String str; 
+ while((str=br.readLine())!=null) { 
+ System.out.println(str ); 
+ } 
+ }catch(FileNotFoundException ce) { 
+ ce.printStackTrace(); 
+ } 
+ catch(IOException e) { 
+ System.out.println("Hi"); 
+ } 
+ } 
+} 
+Which of the following exception will be generated when the specified file is not available?
+A. NoClassDefFoundException     B.    FileNotFoundException
+C. EOFException       D.   IllegalArguementException
+Answer: Option B is the correct answer
+
+QUESTION 2.43 
+Q 43: Sam works as a programmer in Xyz Company and he created the following program:
+class Rose { 
+ public static void main (String args[]) { 
+ // write appropriate code here 
+ switch(k) { 
+ case 65: System.out.println("hello"); 
+ case 'k': System.out.println("Hi"); 
+ case 'j': System.out.println("Java"); 
+ break; 
+ default: System.out.println("default");} 
+ } 
+} 
+You have to choose appropriate code snippet from the following code snippets to replace the “// write
+appropriate code here” statement in the preceding program so that “hello Hi Java” can be printed:
+A. int k = 65       B.    char k= (char) 65;
+C. char k=’A’       D.   int k =’65’
+Answer: Options B and C are the correct answers
